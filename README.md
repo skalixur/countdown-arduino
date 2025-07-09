@@ -14,3 +14,10 @@ You can probably swap these out, but I'm using a:
 - [1602A LCD Display Module](https://www.alldatasheet.com/datasheet-pdf/view/1574132/CRYSTAIFONTZ/LCD-1602A.html) 
 
 ## Pinout
+
+1. A4 - SDA of LCD and RTC
+2. A5 - SCL of LCD and RTC
+3. 5V - VCC
+4. GND - GND
+
+Ensure the microcontroller has proper power.
