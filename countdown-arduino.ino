@@ -1,5 +1,6 @@
 #include <DS3231.h>
 #include <Wire.h>
+#include "config.h"
 
 RTClib rtc;
 
@@ -12,8 +13,8 @@ void setup() {
 }
 
 
-String timeUntil(int dateAndTime) {
-  // String dateAndTime: A date and time in the future as a Unix Timestamp
+String timeUntil(uint32_t dateAndTime) {
+  // String dateAndTime: A date and time in the future as a Unix Timestamp, until the year ~2106
   // Example: 1752082329
 
   DateTime now = rtc.now();
@@ -33,6 +34,6 @@ String timeUntil(int dateAndTime) {
 }
 
 void loop() {
-  Serial.println(timeUntil(1754496000));
+  Serial.println(timeUntil(countdownDate));
   delay(1000);
 }
